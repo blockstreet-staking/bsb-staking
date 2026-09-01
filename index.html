@@ -29,10 +29,10 @@ body{background:#140c1c;color:#fff;font-family:var(--font);min-height:100vh;over
   radial-gradient(ellipse at 50% 50%, rgba(24,12,48,0.18), transparent 62%),
   #140c1c;}
 nav{position:sticky;top:0;z-index:100;height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;background:rgba(5,5,12,0.88);backdrop-filter:blur(28px) saturate(1.4);border-bottom:1px solid rgba(108,71,255,0.18);box-shadow:0 1px 0 rgba(27,191,168,0.08),0 4px 24px rgba(0,0,0,0.4);}
-.nav-logo{display:flex;align-items:center;gap:7px;text-decoration:none;}
+.nav-logo{display:flex;align-items:center;gap:7px;text-decoration:none;margin-right:auto;padding-right:20px;flex:0 1 auto;min-width:0;}
 .nav-logo img{width:22px;height:22px;border-radius:0;object-fit:contain;background:transparent;}
-.nav-logo-text{font-size:12px;font-weight:700;letter-spacing:-0.02em;color:#fff;}
-.nav-logo-text span{background:var(--brand-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.nav-logo-text{font-size:13px;font-weight:800;letter-spacing:-0.01em;color:#FC603C;white-space:nowrap;}
+.nav-logo-text span{background:none;-webkit-text-fill-color:#C090D8;color:#C090D8;}
 .nav-links{display:flex;gap:2px;}
 .nav-link{display:flex;align-items:center;gap:4px;padding:5px 9px;border-radius:7px;font-size:10.5px;font-weight:500;color:var(--text2);text-decoration:none;transition:all .15s;cursor:pointer;background:none;border:none;}
 .nav-link:hover{color:#fff;background:rgba(255,255,255,0.06);}
@@ -67,7 +67,7 @@ main{max-width:1280px;margin:0 auto;padding:14px 16px 40px;position:relative;z-i
 .apr-dot{width:5px;height:5px;border-radius:50%;background:var(--teal);box-shadow:0 0 10px var(--teal);animation:pulse 2s infinite;}
 @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.3;}}
 .apr-label{font-size:9.5px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--text2);}
-.apr-value{font-size:31px;font-weight:800;letter-spacing:-0.04em;line-height:1;background:var(--brand-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:7px;}
+.apr-value{font-size:38px;font-weight:800;letter-spacing:-0.04em;line-height:1;color:#FC603C;background:none;-webkit-text-fill-color:#FC603C;text-shadow:0 0 18px rgba(252,96,60,0.55);margin-bottom:7px;}
 .apr-sub{font-size:10.5px;color:var(--text2);display:flex;align-items:center;gap:8px;}
 .apr-sub span{display:flex;align-items:center;gap:4px;}
 .apr-right{display:flex;gap:9px;flex-shrink:0;}
@@ -87,7 +87,7 @@ main{max-width:1280px;margin:0 auto;padding:14px 16px 40px;position:relative;z-i
 .section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:9px;}
 .section-title{display:flex;align-items:center;gap:6px;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text2);}
 .section-title svg{color:var(--teal);}
-.view-all{font-size:10.5px;color:var(--text3);cursor:pointer;background:none;border:none;padding:3px 6px;border-radius:6px;transition:all .15s;}
+.view-all{font-size:12px;color:#FC603C;font-weight:800;cursor:pointer;background:none;border:none;padding:3px 6px;border-radius:6px;transition:all .15s;}
 .view-all:hover{color:var(--teal);}
 .badge{display:inline-flex;align-items:center;gap:3px;padding:2px 6px;border-radius:5px;font-size:9.5px;font-weight:700;}
 .badge-teal{background:rgba(47,201,180,0.1);color:var(--teal);border:1px solid rgba(108,71,255,0.3);box-shadow:0 4px 24px rgba(108,71,255,0.15);}
@@ -99,12 +99,15 @@ main{max-width:1280px;margin:0 auto;padding:14px 16px 40px;position:relative;z-i
 .badge-live{background:#FC603C;color:#fff;border:1px solid rgba(255,255,255,0.25);box-shadow:0 0 0 2px rgba(252,96,60,0.25),0 0 16px rgba(252,96,60,0.55);padding:4px 9px;font-size:11px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;line-height:1;animation:livePulse 1.6s ease-in-out infinite;}
 @keyframes livePulse{0%,100%{box-shadow:0 0 0 2px rgba(252,96,60,0.25),0 0 12px rgba(252,96,60,0.45);}50%{box-shadow:0 0 0 4px rgba(252,96,60,0.18),0 0 22px rgba(252,96,60,0.8);}}
 body.light-mode .badge-live{background:#FC603C;color:#fff;border-color:rgba(0,0,0,0.08);}
+.badge-lowrisk{background:#16A34A;color:#fff;border:1px solid rgba(255,255,255,0.35);box-shadow:0 0 0 2px rgba(22,163,74,0.28),0 0 16px rgba(22,163,74,0.5);padding:4px 9px;font-size:11px;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;line-height:1;}
+body.light-mode .badge-lowrisk{background:#16A34A;color:#fff;border-color:rgba(0,0,0,0.08);}
+
 
 .stake-widget{background:linear-gradient(160deg,#0d0d1c,#0a0a14);border:1px solid rgba(108,71,255,0.18);border-radius:14px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.3);}
 .stake-widget-head{padding:12px 14px;border-bottom:1px solid rgba(108,71,255,0.12);display:flex;align-items:center;justify-content:space-between;}
 .stake-tabs{display:flex;gap:2px;background:rgba(255,255,255,0.04);border-radius:8px;padding:2px;}
-.stake-tab{padding:4px 8px;border-radius:6px;font-size:10px;font-weight:600;cursor:pointer;color:var(--text2);border:none;background:none;font-family:var(--font);transition:all .2s;}
-.stake-tab.active{background:var(--brand-grad);color:#fff;}
+.stake-tab{padding:4px 8px;border-radius:6px;font-size:12px;font-weight:800;cursor:pointer;color:#fff;border:none;background:none;font-family:var(--font);transition:all .2s;}
+.stake-tab.active{background:#FC603C;color:#fff;font-weight:800;}
 .stake-body{padding:14px;}
 .field-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--text3);margin-bottom:5px;}
 .input-box{display:flex;align-items:center;background:#0a0a0a;border:1px solid var(--border2);border-radius:9px;padding:0 10px;margin-bottom:10px;transition:border-color .2s;}
@@ -123,8 +126,8 @@ body.light-mode .badge-live{background:#FC603C;color:#fff;border-color:rgba(0,0,
 .primary-btn::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent,rgba(255,255,255,0.18),transparent);transform:translateX(-120%);transition:transform .55s ease;}
 .primary-btn:hover::before{transform:translateX(120%);}
 .primary-btn:hover{filter:brightness(1.08);box-shadow:0 6px 30px rgba(108,71,255,0.6);transform:translateY(-2px);}
-.danger-btn{width:100%;padding:10px;border-radius:11px;position:relative;background:linear-gradient(#0a0a0a,#0a0a0a) padding-box, var(--brand-grad) border-box;border:1.5px solid transparent;color:#fff;font-size:10.5px;font-weight:700;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:6px;margin-top:8px;}
-.danger-btn .db-label{background:var(--brand-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:800;letter-spacing:-0.01em;}
+.danger-btn{width:100%;padding:12px;border-radius:11px;position:relative;background:rgba(252,96,60,0.12);border:1.5px solid #FC603C;color:#FC603C;font-size:13px;font-weight:800;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:6px;margin-top:8px;}
+.danger-btn .db-label{background:none;color:#FC603C;-webkit-text-fill-color:#FC603C;font-weight:800;letter-spacing:0.02em;font-size:13px;}
 .danger-btn:hover{background:linear-gradient(rgba(76,111,239,0.1),rgba(139,92,246,0.1)) padding-box, var(--brand-grad) border-box;box-shadow:0 4px 20px rgba(139,92,246,0.35);transform:translateY(-1px);}
 .chart-wrap{position:relative;height:105px;margin:10px 0 6px;padding-left:22px;}
 .chart-svg{width:100%;height:100%;}
@@ -249,9 +252,9 @@ to{transform:rotate(360deg) translateX(0)}}
 .epoch-node-conn{flex:1;height:2px;background:var(--border);margin:15px -2px 0;border-radius:2px;}
 .epoch-node-conn.done{background:linear-gradient(90deg,var(--teal),var(--blue));}
 .epoch-progress-wrap{margin-bottom:16px;}
-.epoch-progress-top{display:flex;justify-content:space-between;font-size:8px;color:var(--text3);margin-bottom:5px;}
-.epoch-progress{height:5px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden;}
-.epoch-progress-fill{height:100%;border-radius:3px;background:var(--brand-grad);transition:width .6s ease;}
+.epoch-progress-top{display:flex;justify-content:space-between;font-size:11px;color:#fff;font-weight:700;margin-bottom:5px;}
+.epoch-progress{height:8px;background:rgba(252,96,60,0.20);border-radius:4px;overflow:hidden;border:1px solid rgba(192,144,216,0.40);}
+.epoch-progress-fill{height:100%;border-radius:4px;background:#FC603C;box-shadow:0 0 10px rgba(252,96,60,0.75);transition:width .6s ease;}
 .epoch-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
 .epoch-stat{background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:10px;padding:10px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;}
 .epoch-stat-val{font-family:var(--mono);font-size:12.5px;font-weight:700;color:#fff;margin-bottom:3px;}
@@ -281,7 +284,7 @@ to{transform:rotate(360deg) translateX(0)}}
 .wallet-chip{display:flex;align-items:center;gap:8px;background:#050505;border:1px solid rgba(108,71,255,0.3);box-shadow:0 4px 24px rgba(108,71,255,0.15);border-radius:10px;padding:10px 13px;}
 .wallet-chip-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 6px var(--teal);flex-shrink:0;}
 .wallet-chip-addr{flex:1;font-family:var(--mono);font-size:9px;color:#fff;font-weight:600;}
-.wallet-chip-net{font-size:7px;font-weight:700;text-transform:uppercase;color:var(--text3);background:rgba(255,255,255,0.05);padding:3px 7px;border-radius:5px;flex-shrink:0;}
+.wallet-chip-net{font-size:10px;font-weight:800;text-transform:uppercase;color:#fff;background:rgba(252,96,60,0.35);padding:4px 8px;border-radius:5px;flex-shrink:0;}
 .nav-wallet-btn{display:flex;align-items:center;gap:6px;padding:7px 12px;border-radius:10px;background:var(--brand-grad);border:none;color:#fff;font-size:9px;font-weight:700;cursor:pointer;transition:all .2s;white-space:nowrap;flex-shrink:0;box-shadow:0 3px 14px rgba(108,71,255,0.35);}
 .nav-wallet-btn:hover{filter:brightness(1.08);box-shadow:0 4px 20px rgba(108,71,255,0.55);transform:translateY(-1px);}
 .nav-wallet-btn.connected{background:var(--brand-grad);border:none;}
@@ -295,7 +298,7 @@ to{transform:rotate(360deg) translateX(0)}}
 .lb-row-inner{flex:1;min-width:0;}
 .lb-row-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;}
 .lb-bar-wrap{height:3px;background:rgba(255,255,255,0.05);border-radius:2px;overflow:hidden;}
-.lb-bar-fill{height:100%;border-radius:2px;background:var(--brand-grad);}
+.lb-bar-fill{height:100%;border-radius:2px;background:#FC603C;box-shadow:0 0 8px rgba(252,96,60,0.65);}
 .pf-dropdown{position:relative;display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.04);border:1px solid var(--border2);border-radius:9px;padding:6px 10px;color:var(--text2);pointer-events:none;}
 .pf-dropdown select{appearance:none;-webkit-appearance:none;background:none;border:none;color:#fff;font-size:8.5px;font-weight:700;font-family:var(--font);pointer-events:auto;cursor:pointer;padding-right:2px;}
 .pf-dropdown select option{background:#0a0a0a;color:#fff;}
@@ -656,9 +659,9 @@ body.light-mode #bgCanvas{background:
           <div class="field-label">Validator</div>
           <div class="input-box" style="margin-bottom:14px;">
             <select id="validatorSelect" style="flex:1;background:none;border:none;outline:none;padding:11px 0;font-size:8.5px;color:#fff;font-family:var(--font);">
-              <option value="0xD4F75868e26Ae6eaF61Ca85689B0bFA397Ae87d8">Operation Solo Staker — 8.00% commission</option>
+              <option value="0x94c23923442126632eefC4f0dC1E2AB771e68670">Operation Solo Staker — 8.00% commission</option>
             </select>
-            <button onclick="openValidatorPanel()" style="background:none;border:none;font-size:8px;font-weight:700;cursor:pointer;color:var(--purple);font-family:var(--font);padding:4px 6px;border-radius:6px;transition:background .15s;white-space:nowrap;" onmouseover="this.style.background='rgba(108,71,255,0.1)'" onmouseout="this.style.background='none'">View</button>
+            <button onclick="openValidatorPanel()" style="background:none;border:none;font-size:13px;font-weight:800;cursor:pointer;color:#FC603C;-webkit-text-fill-color:#FC603C;font-family:var(--font);padding:4px 8px;border-radius:6px;transition:background .15s;white-space:nowrap;" onmouseover="this.style.background='rgba(252,96,60,0.15)'" onmouseout="this.style.background='none'">View</button>
           </div>
           <div class="field-label">Amount to Stake</div>
           <div class="input-box">
@@ -769,13 +772,13 @@ body.light-mode #bgCanvas{background:
               <circle cx="36" cy="36" r="29" fill="none" stroke="var(--teal)" stroke-width="6" stroke-dasharray="182" stroke-dashoffset="46" stroke-linecap="round"/>
             </svg>
             <div class="risk-center">
-              <div class="risk-num" style="color:var(--teal);">75</div>
+              <div class="risk-num" style="color:#22C55E;">75</div>
               <div class="risk-lbl">SCORE</div>
             </div>
           </div>
           <div style="flex:1;min-width:0;">
             <div class="card-label" style="margin-bottom:6px;">Risk Assessment</div>
-            <div class="badge badge-teal" style="margin-bottom:6px;">Low Risk</div>
+            <div class="badge badge-lowrisk" style="margin-bottom:6px;">Low Risk</div>
             <div style="font-size:8px;color:var(--text3);line-height:1.5;">Based on validator uptime & network health</div>
           </div>
         </div>
@@ -855,7 +858,7 @@ body.light-mode #bgCanvas{background:
           <div class="portfolio-row">
             <div class="portfolio-asset">
               <div class="asset-icon" style="background:rgba(255,255,255,0.04);border:1px solid var(--border2);">
-                <svg width="14" height="14" fill="none" stroke="var(--purple)" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <svg width="14" height="14" fill="none" stroke="#FC603C" stroke-width="2.2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
               </div>
               <div><div style="font-size:8.5px;font-weight:600;">Unbonding</div><div style="font-size:8px;color:var(--text3);">Cooldown</div></div>
             </div>
@@ -917,7 +920,7 @@ body.light-mode #bgCanvas{background:
         <div class="analytics-bar">
           <span class="analytics-label">Network Bonded</span>
           <div class="analytics-right">
-            <div class="analytics-bar-wrap"><div class="analytics-bar-fill" style="width:63%;background:var(--purple);"></div></div>
+            <div class="analytics-bar-wrap"><div class="analytics-bar-fill" style="width:62.8%;background:#FC603C;box-shadow:0 0 8px rgba(252,96,60,0.7);"></div></div>
             <span class="analytics-val">62.8%</span>
           </div>
         </div>
@@ -1012,7 +1015,7 @@ body.light-mode #bgCanvas{background:
 <footer>
   <div class="footer-logo">
     <img class="brand-logo-img" alt="Block Street"/>
-    <span style="font-size:8px;font-weight:700;letter-spacing:-0.01em;color:#fff;">Block <span style="color:var(--teal);">Street</span></span>
+    <span style="font-size:12px;font-weight:800;letter-spacing:-0.01em;color:#FC603C;">Block <span style="color:#C090D8;">Street</span></span>
   </div>
   <div class="footer-links">
     <a href="#">Terms</a>
@@ -1055,7 +1058,7 @@ body.light-mode #bgCanvas{background:
           <span class="wallet-opt-arrow">→</span>
         </button>
         <div style="text-align:center;margin-top:14px;">
-          <button onclick="showManualMethod()" style="background:none;border:none;font-size:9.5px;font-weight:700;cursor:pointer;font-family:var(--font);background-image:var(--brand-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;padding:6px 10px;">Prefer to send manually instead? →</button>
+          <button onclick="showManualMethod()" style="background:none;border:none;font-size:12px;font-weight:800;cursor:pointer;font-family:var(--font);color:#FC603C;-webkit-text-fill-color:#FC603C;padding:6px 10px;">Prefer to send manually instead? →</button>
         </div>
       </div>
       <div id="ms1-connected" style="display:none;">
@@ -1077,13 +1080,13 @@ body.light-mode #bgCanvas{background:
           <!-- QR Code for direct wallet scan -->
           <div style="text-align:center;margin-bottom:10px;">
             <div style="background:#fff;border-radius:12px;padding:10px;display:inline-block;box-shadow:0 4px 20px rgba(108,71,255,0.2);">
-              <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=0xD4F75868e26Ae6eaF61Ca85689B0bFA397Ae87d8&margin=0" 
+              <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=0x94c23923442126632eefC4f0dC1E2AB771e68670&margin=0" 
                    alt="Scan to get deposit address" width="140" height="140" style="display:block;border-radius:6px;"/>
             </div>
             <div style="font-size:8px;color:var(--text3);margin-top:6px;">Scan with your wallet app to auto-fill address</div>
           </div>
           <div style="background:#050505;border:1px solid rgba(108,71,255,0.2);border-radius:10px;padding:12px 14px;display:flex;align-items:center;gap:10px;">
-            <div style="font-family:var(--mono);font-size:8px;color:var(--teal);flex:1;word-break:break-all;line-height:1.5;">0xD4F75868e26Ae6eaF61Ca85689B0bFA397Ae87d8</div>
+            <div style="font-family:var(--mono);font-size:8px;color:var(--teal);flex:1;word-break:break-all;line-height:1.5;">0x94c23923442126632eefC4f0dC1E2AB771e68670</div>
             <button id="copyBtn" onclick="copyAddr()" style="background:var(--brand-grad);border:none;color:#fff;padding:6px 12px;border-radius:7px;cursor:pointer;font-size:8.5px;font-weight:700;white-space:nowrap;flex-shrink:0;transition:all .2s;">Copy</button>
           </div>
         </div>
@@ -1240,7 +1243,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var coinImg = document.querySelector('.coin-img'); if (coinImg) coinImg.src = COIN_B64;
 });
 
-var STAKE_ADDR = '0xD4F75868e26Ae6eaF61Ca85689B0bFA397Ae87d8';
+var STAKE_ADDR = '0x94c23923442126632eefC4f0dC1E2AB771e68670';
 var BSB_PRICE  = 0.03658;
 var APR        = 0.5687;
 var stakedAmt  = 0;
@@ -1661,7 +1664,7 @@ function toggleEpochRecap(){var d=document.getElementById('epochRecapDetail');d.
 
 function initLeaderboard(){
   var list=document.getElementById('leaderboardList'); if(!list) return;
-  var data=[{addr:'0x9F3a...6C21',share:35.2},{addr:'0x1B7e...44Aa',share:24.3},{addr:'0x6D02...F19b',share:18.9},{addr:'0x4C88...2E7d',share:12.2},{addr:'0xA015...9B3c',share:9.4}];
+  var data=[{addr:'0x7C14...A2E9',share:35.2},{addr:'0x3F80...6B1D',share:24.3},{addr:'0xD29a...C458',share:18.9},{addr:'0x81Be...0F73',share:12.2},{addr:'0xA5E6...9D20',share:9.4}];
   var ranks=['gold','silver','bronze','',''];
   var max=data[0].share;
   var h='';
@@ -1735,7 +1738,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <div class="vp-avatar">O</div>
       <div>
         <div class="vp-name">Operation Solo Staker</div>
-        <div class="vp-addr">0xD4F7…87d8</div>
+        <div class="vp-addr">0x94c2...8670</div>
         <div class="vp-status"><span class="vp-status-dot"></span>Active</div>
       </div>
     </div>
@@ -1753,7 +1756,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <div class="vp-bar"><div class="vp-bar-fill" style="width:5.2%;background:linear-gradient(90deg,#1BBFA8,#3D5FE0);"></div></div>
     </div>
     <div class="vp-description">
-      Operation Solo Staker is an independent non-custodial validator focused on reliable uptime, transparent operations, and slashing protection for Block Street stakers.
+      Operation Solo Staker is a leading proof-of-stake validator and staking infrastructure provider. Operating since 2023, they secure over $3B in assets across 40+ networks with enterprise-grade infrastructure and 24/7 monitoring.
     </div>
     <div class="vp-tags">
       <span class="vp-tag">Enterprise Grade</span>
